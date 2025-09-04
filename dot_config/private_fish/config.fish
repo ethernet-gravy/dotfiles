@@ -12,3 +12,5 @@ function ya
 end
 
 set PATH $PATH ~/.config/emacs/bin
+
+direnv hook fish | source
