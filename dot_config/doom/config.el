@@ -4,7 +4,9 @@
 
 (setq display-line-numbers-type `relative)
 
-(setq evil-shift-round nil)
+(after! evil
+  (setq evil-shift-round nil)
+  (setq evil-respect-visual-line-mode t))
 
 (setq which-key-idle-delay 0.5)
 
@@ -78,6 +80,7 @@
   (setq org-download-link-format "[[file:%s]]\n"
         org-download-abbreviate-filename-function #'file-relative-name)
   (setq org-download-link-format-function #'org-download-link-format-function-default)
+  (setq org-download-disable-id-create t)
 )
 
 (after! org

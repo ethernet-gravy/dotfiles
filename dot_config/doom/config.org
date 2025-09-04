@@ -23,7 +23,9 @@ numbers are disabled. For relative line numbers, set this to `relative'.
 #+end_src
 * Evil-mode
 #+begin_src emacs-lisp
-(setq evil-shift-round nil)
+(after! evil
+  (setq evil-shift-round nil)
+  (setq evil-respect-visual-line-mode t))
 #+end_src
 * Which Key
 Set the whick key opening delay to  0.5 seconds
@@ -130,6 +132,7 @@ smartparens equivalency (default +smartparens under doom config is NOT all you n
   (setq org-download-link-format "[[file:%s]]\n"
         org-download-abbreviate-filename-function #'file-relative-name)
   (setq org-download-link-format-function #'org-download-link-format-function-default)
+  (setq org-download-disable-id-create t)
 )
 #+end_src
 Add an advice to supress org-get-id call on org-download-clipboard

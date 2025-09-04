@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR DOOMDIR:/home/nakul/\x2econfig/doom
+SETUVAR --path PATH:/home/nakul/\x2elocal/bin\x1e/run/wrappers/bin\x1e/home/nakul/\x2enix\x2dprofile/bin\x1e/nix/profile/bin\x1e/home/nakul/\x2elocal/state/nix/profile/bin\x1e/etc/profiles/per\x2duser/nakul/bin\x1e/nix/var/nix/profiles/default/bin\x1e/run/current\x2dsystem/sw/bin\x1e/nix/store/lv91pnk6dqvw0xmbi5irli7m6nikfr33\x2dbinutils\x2dwrapper\x2d2\x2e44/bin\x1e/nix/store/4wgr4waq5xxk94vgc8lyyhsp7l59jprp\x2dhyprland\x2dqtutils\x2d0\x2e1\x2e4/bin\x1e/nix/store/5h5758kspk2ir12dvwrgilmcizz617kh\x2dpciutils\x2d3\x2e14\x2e0/bin\x1e/nix/store/43vw43b1km56y6idkzrbz5narkhlfca4\x2dpkgconf\x2dwrapper\x2d2\x2e4\x2e3/bin\x1e/nix/store/k75dxigqjiqbg7i9rfkmx4m9q4fpv6h5\x2dkitty\x2d0\x2e42\x2e2/bin\x1e/nix/store/71zmb5blvs1w6fkiwayidzx8mbmqiyl7\x2dimagemagick\x2d7\x2e1\x2e2\x2d0/bin\x1e/nix/store/z1l05nn4xyaxv25f9pvi7bkmw6jmb48c\x2dncurses\x2d6\x2e5\x2ddev/bin\x1e/home/nakul/\x2econfig/emacs/bin
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
