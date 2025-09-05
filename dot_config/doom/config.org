@@ -60,7 +60,7 @@ Set the directory
 (add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
 ;;(add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
-(add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
+(add-hook 'org-mode-hook 'org-latex-preview-mode)
 (after! org
   (setq org-directory "~/notes/org-mode/")
   (setq org-roam-directory "~/notes/org-mode/")
@@ -86,6 +86,18 @@ Setting the variable fonts
   (setq writeroom-width 250)
   )
 (add-hook 'org-mode-hook '+zen/toggle)
+#+end_src
+** Disable line numbers in org
+#+begin_src emacs-lisp
+(after! org
+  (add-hook 'org-mode-hook #'doom-disable-line-numbers-h))
+#+end_src
+
+** bind j and k to evil-visual-line up and down.
+#+begin_src emacs-lisp
+(after! evil
+  (map! :nv "j" #'evil-next-visual-line
+        :nv "k" #'evil-previous-visual-line))
 #+end_src
 ** Run buffers in org-mode by default:
 #+begin_src emacs-lisp

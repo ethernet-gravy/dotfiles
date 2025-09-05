@@ -30,7 +30,7 @@
 (add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
 ;;(add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
-(add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
+(add-hook 'org-mode-hook 'org-latex-preview-mode)
 (after! org
   (setq org-directory "~/notes/org-mode/")
   (setq org-roam-directory "~/notes/org-mode/")
@@ -51,6 +51,13 @@
   (setq writeroom-width 250)
   )
 (add-hook 'org-mode-hook '+zen/toggle)
+
+(after! org
+  (add-hook 'org-mode-hook #'doom-disable-line-numbers-h))
+
+(after! evil
+  (map! :nv "j" #'evil-next-visual-line
+        :nv "k" #'evil-previous-visual-line))
 
 (setq-default major-mode 'org-mode)
 
