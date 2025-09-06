@@ -13,4 +13,6 @@ end
 
 set PATH $PATH ~/.config/emacs/bin
 
+alias  cz "chezmoi"
+
 direnv hook fish | source

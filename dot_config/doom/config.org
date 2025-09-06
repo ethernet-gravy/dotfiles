@@ -162,6 +162,12 @@ Fix that annoying sqlitep nil error:
 
 (advice-add 'emacsql-close :before-while #'patch/emacsql-close)
 #+end_src
+
+*** Set org roam db location to synced notes folder
+#+begin_src emacs-lisp
+(after! org
+  (setq org-roam-db-location "~/notes/org-mode/org.db"))
+#+end_src
 ** Org-indent
 #+begin_src emacs-lisp
 (after! org
@@ -178,15 +184,9 @@ Fix that annoying sqlitep nil error:
 (set-frame-parameter nil 'alpha-background 0.6)
 #+end_src
 * LSP
-Set up ccls
+Set up eglot clangd
 #+begin_src emacs-lisp
-(after! ccls
-  (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
-  (set-lsp-priority! 'ccls 2)) ; optional as ccls is the default in Doom
-#+end_src
-lens update is very slow
-#+begin_src emacs-lisp
-  (setq lsp-lens-enable nil)
+(set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy"))
 #+end_src
 
 * Projectile

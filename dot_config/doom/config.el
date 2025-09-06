@@ -101,6 +101,9 @@
 (advice-add 'emacsql-close :before-while #'patch/emacsql-close)
 
 (after! org
+  (setq org-roam-db-location "~/notes/org-mode/org.db"))
+
+(after! org
   (setq org-indent-indentation-per-level 4))
 
 (after! org
@@ -109,11 +112,7 @@
 
 (set-frame-parameter nil 'alpha-background 0.6)
 
-(after! ccls
-  (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
-  (set-lsp-priority! 'ccls 2)) ; optional as ccls is the default in Doom
-
-(setq lsp-lens-enable nil)
+(set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy"))
 
 (setq projectile-cache-file (concat doom-cache-dir "projectile.cache")
         projectile-enable-caching (not noninteractive)
