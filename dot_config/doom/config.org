@@ -27,6 +27,10 @@ numbers are disabled. For relative line numbers, set this to `relative'.
   (setq evil-shift-round nil)
   (setq evil-respect-visual-line-mode t))
 #+end_src
+* Word Wrap
+#+begin_src emacs-lisp
+(+global-word-wrap-mode +1)
+#+end_src
 * Which Key
 Set the whick key opening delay to  0.5 seconds
 #+begin_src emacs-lisp
@@ -97,7 +101,9 @@ Setting the variable fonts
 #+begin_src emacs-lisp
 (after! evil
   (map! :nv "j" #'evil-next-visual-line
-        :nv "k" #'evil-previous-visual-line))
+        :nv "k" #'evil-previous-visual-line
+        :nv "<down>" #'evil-next-visual-line
+        :nv "<up>" #'evil-previous-visual-line))
 #+end_src
 ** Run buffers in org-mode by default:
 #+begin_src emacs-lisp

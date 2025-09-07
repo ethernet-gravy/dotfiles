@@ -8,6 +8,8 @@
   (setq evil-shift-round nil)
   (setq evil-respect-visual-line-mode t))
 
+(+global-word-wrap-mode +1)
+
 (setq which-key-idle-delay 0.5)
 
 (setq which-key-allow-multiple-replacements t)
@@ -57,7 +59,9 @@
 
 (after! evil
   (map! :nv "j" #'evil-next-visual-line
-        :nv "k" #'evil-previous-visual-line))
+        :nv "k" #'evil-previous-visual-line
+        :nv "<down>" #'evil-next-visual-line
+        :nv "<up>" #'evil-previous-visual-line))
 
 (setq-default major-mode 'org-mode)
 

@@ -78,4 +78,3 @@
 (unpin! org-download)
 (package! cdlatex)
 
-(package! eglot-java)
