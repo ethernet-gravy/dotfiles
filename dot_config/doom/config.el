@@ -114,6 +114,9 @@
   (setq org-fold-core-style 'overlays)
   (evil-select-search-module 'evil-search-module 'evil-search))
 
+(after! tex
+  (setq +latex-viewers '(zathura)))
+
 (set-frame-parameter nil 'alpha-background 0.6)
 
 (set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy"))

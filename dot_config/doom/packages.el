@@ -72,7 +72,6 @@
   :pin nil)
 
 (unpin! org)
-
 (package! org-download :recipe
   (:host nil :repo "https://github.com/ethernet-gravy/org-download"))
 (unpin! org-download)

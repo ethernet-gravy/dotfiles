@@ -153,6 +153,10 @@ smartparens equivalency (default +smartparens under doom config is NOT all you n
   (setq org-download-disable-id-create t)
 )
 #+end_src
+
+#+RESULTS:
+: t
+
 Add an advice to supress org-get-id call on org-download-clipboard
 #+begin_src emacs-lisp
 (after! org
@@ -184,6 +188,11 @@ Fix that annoying sqlitep nil error:
 (after! org
   (setq org-fold-core-style 'overlays)
   (evil-select-search-module 'evil-search-module 'evil-search))
+#+end_src
+* Latex
+#+begin_src emacs-lisp
+(after! tex
+  (setq +latex-viewers '(zathura)))
 #+end_src
 * Transparency
 #+begin_src  emacs-lisp
