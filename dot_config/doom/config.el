@@ -1,6 +1,7 @@
 (setq doom-localleader-key ",")
 
-(setq doom-theme 'modus-vivendi)
+(setq doom-theme 'modus-vivendi
+      fancy-splash-image (concat doom-private-dir "logo/doom.png"))
 
 (setq display-line-numbers-type `relative)
 
@@ -22,6 +23,7 @@
 
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
+(add-hook 'org-mode-hook 'org-latex-preview-mode)
 
 (defun enable-word-processor-minor-modes ()
   (setq line-spacing 0.15)
@@ -32,8 +34,8 @@
 (add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
 ;;(add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
-(add-hook 'org-mode-hook 'org-latex-preview-mode)
 (after! org
+  (setq org-latex-preview-mode-display-live t)
   (setq org-directory "~/notes/org-mode/")
   (setq org-roam-directory "~/notes/org-mode/")
   (setq org-habit-show-habits-only-for-today nil)
@@ -113,6 +115,15 @@
 (after! org
   (setq org-fold-core-style 'overlays)
   (evil-select-search-module 'evil-search-module 'evil-search))
+
+(after! ob-mermaid
+  (setq ob-mermaid-cli-path "mmdc"))
+
+(after! org
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((mermaid . t)
+      (emacs-lisp . t))))
 
 (after! tex
   (setq +latex-viewers '(zathura)))

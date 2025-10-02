@@ -12,9 +12,11 @@ available. You can either set `doom-theme' or manually load a theme with the
 `load-theme' function. This is the default:
 
 #+begin_src emacs-lisp
-(setq doom-theme 'modus-vivendi)
-
+(setq doom-theme 'modus-vivendi
+      fancy-splash-image (concat doom-private-dir "logo/doom.png"))
 #+end_src
+
+
 
 This determines the style of line numbers in effect. If set to `nil', line
 numbers are disabled. For relative line numbers, set this to `relative'.
@@ -54,6 +56,7 @@ Set the directory
 
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
+(add-hook 'org-mode-hook 'org-latex-preview-mode)
 
 (defun enable-word-processor-minor-modes ()
   (setq line-spacing 0.15)
@@ -64,8 +67,8 @@ Set the directory
 (add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
 ;;(add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
-(add-hook 'org-mode-hook 'org-latex-preview-mode)
 (after! org
+  (setq org-latex-preview-mode-display-live t)
   (setq org-directory "~/notes/org-mode/")
   (setq org-roam-directory "~/notes/org-mode/")
   (setq org-habit-show-habits-only-for-today nil)
@@ -188,6 +191,20 @@ Fix that annoying sqlitep nil error:
 (after! org
   (setq org-fold-core-style 'overlays)
   (evil-select-search-module 'evil-search-module 'evil-search))
+#+end_src
+* Org Babel
+** Org Mermaid
+#+begin_src emacs-lisp
+(after! ob-mermaid
+  (setq ob-mermaid-cli-path "mmdc"))
+#+end_src
+** Org Babel List
+#+begin_src emacs-lisp
+(after! org
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((mermaid . t)
+      (emacs-lisp . t))))
 #+end_src
 * Latex
 #+begin_src emacs-lisp

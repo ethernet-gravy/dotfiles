@@ -76,4 +76,4 @@
   (:host nil :repo "https://github.com/ethernet-gravy/org-download"))
 (unpin! org-download)
 (package! cdlatex)
-
+(package! ob-mermaid)
