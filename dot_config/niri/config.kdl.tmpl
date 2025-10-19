@@ -284,7 +284,7 @@ spawn-at-startup "waybar"
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/screenshots/%Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
@@ -590,6 +590,7 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Print { screenshot; }
+    Mod+Print { spawn "sh" "-c" "satty --filename \"$HOME/screenshots/$(ls -Art ~/screenshots | tail -n1)\""; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
