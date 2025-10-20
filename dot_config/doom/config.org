@@ -12,7 +12,7 @@ available. You can either set `doom-theme' or manually load a theme with the
 `load-theme' function. This is the default:
 
 #+begin_src emacs-lisp
-(setq doom-theme 'modus-vivendi
+(setq doom-theme 'doom-alabaster
       fancy-splash-image (concat doom-private-dir "logo/doom.png"))
 #+end_src
 
@@ -213,7 +213,7 @@ Fix that annoying sqlitep nil error:
 #+end_src
 * Transparency
 #+begin_src  emacs-lisp
-(set-frame-parameter nil 'alpha-background 0.6)
+(set-frame-parameter nil 'alpha-background 100)
 #+end_src
 * LSP
 Set up eglot clangd

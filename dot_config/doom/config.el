@@ -1,6 +1,6 @@
 (setq doom-localleader-key ",")
 
-(setq doom-theme 'modus-vivendi
+(setq doom-theme 'doom-alabaster
       fancy-splash-image (concat doom-private-dir "logo/doom.png"))
 
 (setq display-line-numbers-type `relative)
@@ -128,7 +128,7 @@
 (after! tex
   (setq +latex-viewers '(zathura)))
 
-(set-frame-parameter nil 'alpha-background 0.6)
+(set-frame-parameter nil 'alpha-background 100)
 
 (set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy"))
 
