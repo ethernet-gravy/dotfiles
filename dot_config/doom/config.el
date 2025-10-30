@@ -110,6 +110,9 @@
   (setq org-roam-db-location "~/notes/org-mode/org.db"))
 
 (after! org
+  (setq org-roam-completion-functions (list #'org-roam-complete-link-at-point)))
+
+(after! org
   (setq org-indent-indentation-per-level 4))
 
 (after! org
@@ -126,6 +129,7 @@
       (emacs-lisp . t))))
 
 (after! tex
+  (setq TeX-electric-sub-and-superscript t)
   (setq +latex-viewers '(zathura)))
 
 (set-frame-parameter nil 'alpha-background 100)

@@ -78,3 +78,4 @@
 (package! cdlatex)
 (package! ob-mermaid)
 (package! doom-alabaster-theme :recipe (:host github :repo "agraul/doom-alabaster-theme"))
+(package! eglot-java)

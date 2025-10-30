@@ -181,6 +181,12 @@ Fix that annoying sqlitep nil error:
 (after! org
   (setq org-roam-db-location "~/notes/org-mode/org.db"))
 #+end_src
+*** Org roam completions to only link at point, it's annoying otherwise
+#+begin_src emacs-lisp
+(after! org
+  (setq org-roam-completion-functions (list #'org-roam-complete-link-at-point)))
+
+#+end_src
 ** Org-indent
 #+begin_src emacs-lisp
 (after! org
@@ -209,6 +215,7 @@ Fix that annoying sqlitep nil error:
 * Latex
 #+begin_src emacs-lisp
 (after! tex
+  (setq TeX-electric-sub-and-superscript t)
   (setq +latex-viewers '(zathura)))
 #+end_src
 * Transparency
