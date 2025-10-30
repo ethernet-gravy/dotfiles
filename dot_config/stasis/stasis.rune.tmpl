@@ -12,8 +12,10 @@ stasis:
   monitor_media true
   ignore_remote_media true
   respect_idle_inhibitors true
+  {{ if eq .machine "x1" }}
   lid_close_action "lock-screen" #(lock-screen | suspend | custom | ignore)
   lid_open_action "wake" #(wake | custom | ignore)
+  {{ end }}
   # debounce: default is 3s; can be customized if needed
   # debounce-seconds 4
 
@@ -21,10 +23,11 @@ stasis:
     "mpv"
     r".*\.exe"
     r"steam_app_.*"
+    r"firefox.*"
   ]
 
   # desktop-only idle actions (applies to all devices)
-  lock-screen:
+  lock_screen:
     timeout 300
     command "swaylock"
     resume-command "notify-send 'Welcome Back $env.USER!'"
