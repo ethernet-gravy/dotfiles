@@ -12,8 +12,8 @@ stasis:
   monitor_media true
   ignore_remote_media true
   respect_idle_inhibitors true
-  #lid_close_action "lock-screen" (lock-screen | suspend | custom | ignore)
-  #lid_open_action "wake" (wake | custom | ignore)
+  lid_close_action "lock-screen" (lock-screen | suspend | custom | ignore)
+  lid_open_action "wake" (wake | custom | ignore)
   # debounce: default is 3s; can be customized if needed
   # debounce-seconds 4
 
@@ -24,7 +24,7 @@ stasis:
   ]
 
   # desktop-only idle actions (applies to all devices)
-  lock_screen:
+  lock-screen:
     timeout 300
     command "swaylock"
     resume-command "notify-send 'Welcome Back $env.USER!'"
