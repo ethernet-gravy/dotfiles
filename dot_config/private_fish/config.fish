@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 function ya
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"
 	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
 		builtin cd -- "$cwd"
@@ -14,5 +14,6 @@ end
 set PATH $PATH ~/.config/emacs/bin
 
 alias  cz "chezmoi"
+alias  cze "chezmoi edit --apply"
 
 direnv hook fish | source
