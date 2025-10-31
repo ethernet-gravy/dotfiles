@@ -8,7 +8,7 @@ app_default_timeout 300
 # Stasis configuration
 #
 stasis:
-  pre_suspend_command "swaylock"
+  pre_suspend_command "hyprlock"
   monitor_media true
   ignore_remote_media true
   respect_idle_inhibitors true
@@ -29,7 +29,7 @@ stasis:
   # desktop-only idle actions (applies to all devices)
   lock_screen:
     timeout 300
-    command "swaylock"
+    command "hyprlock"
     resume-command "notify-send 'Welcome Back $env.USER!'"
   end
 
@@ -57,7 +57,7 @@ stasis:
 
     lock_screen:
       timeout 300
-      command "swaylock"
+      command "hyprlock"
     end
 
     brightness:
@@ -85,7 +85,7 @@ stasis:
 
     lock_screen:
       timeout 120
-      command "swaylock"
+      command "hyprlock"
     end
 
     brightness:
