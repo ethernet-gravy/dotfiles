@@ -95,10 +95,12 @@
                     "displayMode": "onhover",
                     "id": "Volume"
                 },
+                {{ if eq .machine "x1" }}
                 {
                     "displayMode": "onhover",
                     "id": "Brightness"
                 },
+                {{ end }}
                 {
                     "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
