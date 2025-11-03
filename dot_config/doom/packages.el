@@ -79,3 +79,5 @@
 (package! ob-mermaid)
 (package! doom-alabaster-theme :recipe (:host github :repo "agraul/doom-alabaster-theme"))
 (package! eglot-java)
+(package! htmlz-mode :recipe
+  (:host nil :repo "https://github.com/0xekez/htmlz-mode"))

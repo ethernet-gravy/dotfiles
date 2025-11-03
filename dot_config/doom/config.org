@@ -240,3 +240,9 @@ Set up eglot clangd
         projectile-globally-ignored-file-suffixes '(".elc" ".pyc" ".o")
         projectile-ignored-projects '("~/" "/tmp"))
 #+end_src
+* Web languages
+HTML Auto Preview
+#+begin_src emacs-lisp
+(after! web-mode
+  (add-hook 'web-mode-hook #'htmlz-mode))
+#+end_src

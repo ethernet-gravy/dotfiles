@@ -145,3 +145,6 @@
 " "TAGS")
         projectile-globally-ignored-file-suffixes '(".elc" ".pyc" ".o")
         projectile-ignored-projects '("~/" "/tmp"))
+
+(after! web-mode
+  (add-hook 'web-mode-hook #'htmlz-mode))
