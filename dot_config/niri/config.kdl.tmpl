@@ -574,7 +574,8 @@ binds {
     Mod+Ctrl+F { expand-column-to-available-width; }
 
     // Mod+C {spawn "walker" "-m" "clipboard";} doesnt work yet on nixos
-    Mod+C {spawn "cliphist" "list" "|" "rofi" "dmenu" "|" "cliphist" "decode" "|" "wl-copy"; }
+    //Mod+C {spawn "sh" "-c" "cliphist" "list" "|" "rofi" "-dmenu" "|" "cliphist" "decode" "|" "wl-copy"; }
+    Mod+C {spawn-sh "cliphist list | rofi -dmenu | cliphist decode | wl-copy";}
     Mod+Backspace {spawn "rofi" "-show" "power-menu" "-modi" "power-menu:rofi-power-menu";}
     Mod+Shift+C { center-column; }
 
