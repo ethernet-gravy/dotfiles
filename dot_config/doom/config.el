@@ -21,6 +21,18 @@
    '(("\\`g s" . "\\`evilem--?motion-\\(.*\\)") . (nil . "◃ \\1"))
    ))
 
+(use-package! neoscroll
+  :config
+  ;; Configure smooth scrolling parameters
+  (setq neoscroll-easing 'cubic)
+  (setq neoscroll-scroll-duration 0.15)
+  (setq neoscroll-page-duration 0.25) 
+  (setq neoscroll-line-duration 0.025)
+  (setq neoscroll-line-step 3)  ; Scroll 3 lines with C-y/C-e
+  
+  ;; Enable neoscroll mode
+  (neoscroll-mode 1))
+
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
 (add-hook 'org-mode-hook 'org-latex-preview-mode)
@@ -45,6 +57,7 @@
   (setq org-startup-folded 'content)
   ;; (setq org-startup-with-inline-images t)
   (setq org-startup-with-link-previews t)
+  (setq org-startup-with-latex-preview t)
   (setq org-ellipsis " ")) ;; folding symbol
 
 (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
