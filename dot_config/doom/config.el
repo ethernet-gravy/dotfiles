@@ -21,18 +21,6 @@
    '(("\\`g s" . "\\`evilem--?motion-\\(.*\\)") . (nil . "◃ \\1"))
    ))
 
-(use-package! neoscroll
-  :config
-  ;; Configure smooth scrolling parameters
-  (setq neoscroll-easing 'cubic)
-  (setq neoscroll-scroll-duration 0.15)
-  (setq neoscroll-page-duration 0.25) 
-  (setq neoscroll-line-duration 0.025)
-  (setq neoscroll-line-step 3)  ; Scroll 3 lines with C-y/C-e
-  
-  ;; Enable neoscroll mode
-  (neoscroll-mode 1))
-
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
 (add-hook 'org-mode-hook 'org-latex-preview-mode)
@@ -43,7 +31,7 @@
   (smartparens-mode)
   (visual-line-mode))
 ;;  (add-hook 'window-size-change-functions 'org-image-resize)
-(add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
+;;(add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
 ;;(add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
 (after! org
@@ -131,6 +119,10 @@
 (after! org
   (setq org-fold-core-style 'overlays)
   (evil-select-search-module 'evil-search-module 'evil-search))
+
+(after! org
+  (setq org-image-actual-width 400)
+  (setq org-image-max-width 400))
 
 (after! ob-mermaid
   (setq ob-mermaid-cli-path "mmdc"))

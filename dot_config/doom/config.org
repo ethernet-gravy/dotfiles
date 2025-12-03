@@ -50,7 +50,7 @@ replace evil- in which-key entries to make em easier to read
    ))
 
 #+end_src
-* Neoscroll
+* COMMENT Neoscroll
 #+begin_src emacs-lisp
 (use-package! neoscroll
   :config
@@ -63,6 +63,11 @@ replace evil- in which-key entries to make em easier to read
   
   ;; Enable neoscroll mode
   (neoscroll-mode 1))
+#+end_src
+* COMMENT Org Sliced Image
+#+begin_src emacs-lisp
+(after! org
+  (org-sliced-images-mode 1))
 #+end_src
 * Org Mode
 Set the directory
@@ -78,7 +83,7 @@ Set the directory
   (smartparens-mode)
   (visual-line-mode))
 ;;  (add-hook 'window-size-change-functions 'org-image-resize)
-(add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
+;;(add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
 ;;(add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
 (after! org
@@ -214,6 +219,12 @@ Fix that annoying sqlitep nil error:
   (evil-select-search-module 'evil-search-module 'evil-search))
 #+end_src
 ** Org Latex Preview Auto Mode
+** Org Mode Image config
+#+begin_src emacs-lisp
+(after! org
+  (setq org-image-actual-width 400)
+  (setq org-image-max-width 400))
+#+end_src
 * Org Babel
 ** Org Mermaid
 #+begin_src emacs-lisp

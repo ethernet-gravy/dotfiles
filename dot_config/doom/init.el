@@ -38,7 +38,7 @@
        ;;indent-guides     ; highlighted indent columns
        ;;(ligatures +iosevka )        ; ligatures and symbols to make your code pretty again
        ;;minimap           ; show a map of the code on the side
-       modeline          ; snazzy, Atom-inspired modeline, plus API
+       (modeline +light)          ; snazzy, Atom-inspired modeline, plus API
        ;;nav-flash         ; blink cursor line after big motions
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
@@ -51,7 +51,7 @@
        window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
        zen               ; distraction-free coding or writing
-       ;; (smooth-scroll +interpolate)
+       smooth-scroll
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
@@ -155,7 +155,8 @@
        ;;nim               ; python + lisp at the speed of c
        nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
-       (org +roam2 +noter +dragndrop +pretty)               ; organize your plain life in plain text
+       (org +roam2 +noter +dragndrop) ;; +pretty)
+                                        ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
