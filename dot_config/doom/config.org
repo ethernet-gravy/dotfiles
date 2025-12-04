@@ -21,7 +21,7 @@ available. You can either set `doom-theme' or manually load a theme with the
 This determines the style of line numbers in effect. If set to `nil', line
 numbers are disabled. For relative line numbers, set this to `relative'.
 #+begin_src emacs-lisp
-(setq display-line-numbers-type `relative)
+(setq display-line-numbers-type `t)
 #+end_src
 * Evil-mode
 #+begin_src emacs-lisp
@@ -101,12 +101,17 @@ Set the directory
   (setq org-ellipsis " ")) ;; folding symbol
 #+end_src
 ** Org Writeroom
-Setting the variable fonts
+*** COMMENT Setting the variable fonts
 #+begin_src emacs-lisp
 (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "Vollkorn"))
 #+end_src
-
+*** Setting the fixed fonts
+#+begin_src emacs-lisp
+(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
+      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono"))
+#+end_src
+***  Writeroom Mode
 #+begin_src emacs-lisp
 (after! writeroom-mode
   (setq +zen-text-scale 0)
@@ -222,8 +227,8 @@ Fix that annoying sqlitep nil error:
 ** Org Mode Image config
 #+begin_src emacs-lisp
 (after! org
-  (setq org-image-actual-width 400)
-  (setq org-image-max-width 400))
+  (setq org-image-actual-width 300)
+  (setq org-image-max-width 300))
 #+end_src
 * Org Babel
 ** Org Mermaid

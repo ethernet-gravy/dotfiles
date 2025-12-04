@@ -3,7 +3,7 @@
 (setq doom-theme 'doom-alabaster
       fancy-splash-image (concat doom-private-dir "logo/doom.png"))
 
-(setq display-line-numbers-type `relative)
+(setq display-line-numbers-type `t)
 
 (after! evil
   (setq evil-shift-round nil)
@@ -49,7 +49,7 @@
   (setq org-ellipsis " ")) ;; folding symbol
 
 (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
-      doom-variable-pitch-font (font-spec :family "Vollkorn"))
+      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono"))
 
 (after! writeroom-mode
   (setq +zen-text-scale 0)
@@ -121,8 +121,8 @@
   (evil-select-search-module 'evil-search-module 'evil-search))
 
 (after! org
-  (setq org-image-actual-width 400)
-  (setq org-image-max-width 400))
+  (setq org-image-actual-width 300)
+  (setq org-image-max-width 300))
 
 (after! ob-mermaid
   (setq ob-mermaid-cli-path "mmdc"))
