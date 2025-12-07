@@ -3,7 +3,7 @@ https://tecosaur.github.io/emacs-config/config.html
 https://dotdoom.rgoswami.me/config
 * Doom Keybinds
 Set the leader to spacemacs
-#+begin_src emacs-lisp
+#+Begin_src emacs-lisp
 (setq doom-localleader-key ",")
 #+end_src
 * Doom
