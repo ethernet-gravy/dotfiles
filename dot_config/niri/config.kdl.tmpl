@@ -179,7 +179,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1
+        width 3
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -287,6 +287,7 @@ spawn-at-startup  "udiskie"
 spawn-at-startup "stasis"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpaper/dark-hut.jpg"
 //spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 
 {{ if eq .machine "x1" }}

@@ -2,33 +2,5 @@
 # VERSION: 3.0
 SETUVAR DOOMDIR:/home/nakul/\x2econfig/doom
 SETUVAR --path PATH:/home/nakul/\x2elocal/bin\x1e/run/wrappers/bin\x1e/home/nakul/\x2enix\x2dprofile/bin\x1e/nix/profile/bin\x1e/home/nakul/\x2elocal/state/nix/profile/bin\x1e/etc/profiles/per\x2duser/nakul/bin\x1e/nix/var/nix/profiles/default/bin\x1e/run/current\x2dsystem/sw/bin\x1e/nix/store/lv91pnk6dqvw0xmbi5irli7m6nikfr33\x2dbinutils\x2dwrapper\x2d2\x2e44/bin\x1e/nix/store/4wgr4waq5xxk94vgc8lyyhsp7l59jprp\x2dhyprland\x2dqtutils\x2d0\x2e1\x2e4/bin\x1e/nix/store/5h5758kspk2ir12dvwrgilmcizz617kh\x2dpciutils\x2d3\x2e14\x2e0/bin\x1e/nix/store/43vw43b1km56y6idkzrbz5narkhlfca4\x2dpkgconf\x2dwrapper\x2d2\x2e4\x2e3/bin\x1e/nix/store/k75dxigqjiqbg7i9rfkmx4m9q4fpv6h5\x2dkitty\x2d0\x2e42\x2e2/bin\x1e/nix/store/71zmb5blvs1w6fkiwayidzx8mbmqiyl7\x2dimagemagick\x2d7\x2e1\x2e2\x2d0/bin\x1e/nix/store/z1l05nn4xyaxv25f9pvi7bkmw6jmb48c\x2dncurses\x2d6\x2e5\x2ddev/bin\x1e/home/nakul/\x2econfig/emacs/bin
-SETUVAR __fish_initialized:3800
-SETUVAR fish_color_autosuggestion:brblack
-SETUVAR fish_color_cancel:\x2dr
-SETUVAR fish_color_command:normal
-SETUVAR fish_color_comment:red
-SETUVAR fish_color_cwd:green
-SETUVAR fish_color_cwd_root:red
-SETUVAR fish_color_end:green
-SETUVAR fish_color_error:brred
-SETUVAR fish_color_escape:brcyan
-SETUVAR fish_color_history_current:\x2d\x2dbold
-SETUVAR fish_color_host:normal
-SETUVAR fish_color_host_remote:yellow
-SETUVAR fish_color_normal:normal
-SETUVAR fish_color_operator:brcyan
-SETUVAR fish_color_param:cyan
-SETUVAR fish_color_quote:yellow
-SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
-SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
-SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
-SETUVAR fish_color_status:red
-SETUVAR fish_color_user:brgreen
-SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_key_bindings:fish_default_key_bindings
-SETUVAR fish_pager_color_completion:normal
-SETUVAR fish_pager_color_description:yellow\x1e\x2di
-SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
-SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR __fish_initialized:4300
 SETUVAR fish_user_paths:/nix/store/i24mfkgsg2zjqh0jasw2pw3jxjqldp3p\x2dghostty\x2d1\x2e2\x2e2/bin

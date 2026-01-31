@@ -15,5 +15,6 @@ set PATH $PATH ~/.config/emacs/bin
 
 alias  cz "chezmoi"
 alias  cze "chezmoi edit --apply"
+alias ytdl  "yt-dlp --extract-audio --audio-format mp3 -o \"~/Music/Podcasts/%(title)s.%(ext)s\" --embed-thumbnail --metadata-from-title \"%(artist)s - %(title)s\""
 
 direnv hook fish | source
