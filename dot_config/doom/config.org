@@ -133,7 +133,7 @@ Set the directory
         :nv "<down>" #'evil-next-visual-line
         :nv "<up>" #'evil-previous-visual-line))
 #+end_src
-** Run buffers in org-mode by default:
+** COMMENT Run buffers in org-mode by default:
 #+begin_src emacs-lisp
 (setq-default major-mode 'org-mode)
 #+end_src
@@ -277,4 +277,32 @@ HTML Auto Preview
 #+begin_src emacs-lisp
 (after! web-mode
   (add-hook 'web-mode-hook #'htmlz-mode))
+#+end_src
+* Typst
+** add major mode
+#+begin_src emacs-lisp
+(add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
+#+end_src
+** ts mode
+#+begin_src emacs-lisp
+
+(add-hook! 'typst-ts-mode-hook 'eglot-ensure)
+(after! typst-ts-mode
+  (setq typst-ts-watch-options '("--open"))
+  (setq typst-ts-mode-enable-raw-blocks-highlight t)
+  )
+#+end_src
+** LSP
+#+begin_src emacs-lisp
+(set-eglot-client! 'typst-ts-mode '("tinymist"))
+#+end_src
+** Typst preview
+#+begin_src emacs-lisp
+(after! typst-ts
+  (setq typst-preview-autostart t)
+  (setq typst-preview-open-browser-automatically t)
+  (setq typst-preview-browser "default")  ; this is the default option; other options are `eaf-browser' or `xwidget'.
+  (setq typst-preview-invert-colors "never") ; invert colors depending on system theme
+  (setq typst-preview-executable "tinymist") ; path to tinymist binary (relative or absolute)
+  (setq typst-preview-partial-rendering t))   ; enable partial rendering 
 #+end_src
