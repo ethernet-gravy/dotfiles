@@ -75,7 +75,7 @@ Set the directory
 
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
-(add-hook 'org-mode-hook 'org-latex-preview-mode)
+;;(add-hook 'org-mode-hook 'org-latex-preview-mode)
 
 (defun enable-word-processor-minor-modes ()
   (setq line-spacing 0.15)
@@ -86,8 +86,9 @@ Set the directory
 ;;(add-hook 'text-mode-hook 'enable-word-processor-minor-modes)
 ;;(add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
+(remove-hook 'org-mode-hook 'org-modern-mode)
 (after! org
-  (setq org-latex-preview-mode-display-live t)
+  ;; (setq org-latex-preview-mode-display-live t)
   (setq org-directory "~/notes/org-mode/")
   (setq org-roam-directory "~/notes/org-mode/")
   (setq org-habit-show-habits-only-for-today nil)
