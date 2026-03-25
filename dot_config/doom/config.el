@@ -23,7 +23,7 @@
 
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
-;;(add-hook 'org-mode-hook 'org-latex-preview-mode)
+(add-hook 'org-mode-hook 'org-latex-preview-mode)
 
 (defun enable-word-processor-minor-modes ()
   (setq line-spacing 0.15)
@@ -36,7 +36,7 @@
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
 (remove-hook 'org-mode-hook 'org-modern-mode)
 (after! org
-  ;; (setq org-latex-preview-mode-display-live t)
+  (setq org-latex-preview-mode-display-live t)
   (setq org-directory "~/notes/org-mode/")
   (setq org-roam-directory "~/notes/org-mode/")
   (setq org-habit-show-habits-only-for-today nil)
@@ -46,11 +46,11 @@
   (setq org-startup-folded 'content)
   ;; (setq org-startup-with-inline-images t)
   (setq org-startup-with-link-previews t)
-  (setq org-startup-with-latex-preview t)
-  (setq org-ellipsis " ")) ;; folding symbol
+  (setq org-startup-with-latex-preview t))
+  ;; (setq org-ellipsis " ")) ;; folding symbol
 
-(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
-      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono"))
+(setq doom-font (font-spec :family "IntoneMono Nerd Font Mono" :size 18)
+      doom-variable-pitch-font (font-spec :family "Vollkorn"))
 
 (after! writeroom-mode
   (setq +zen-text-scale 0)
@@ -131,6 +131,9 @@
     'org-babel-load-languages
     '((mermaid . t)
       (emacs-lisp . t))))
+
+(after! org
+  (setq ox-clip-linux-cmd "cat %f | wl-copy"))
 
 (after! tex
   (setq TeX-electric-sub-and-superscript t)

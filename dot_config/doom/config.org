@@ -75,7 +75,7 @@ Set the directory
 
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
-;;(add-hook 'org-mode-hook 'org-latex-preview-mode)
+(add-hook 'org-mode-hook 'org-latex-preview-mode)
 
 (defun enable-word-processor-minor-modes ()
   (setq line-spacing 0.15)
@@ -88,7 +88,7 @@ Set the directory
 (add-hook 'org-mode-hook 'org-roam-db-autosync-enable)
 (remove-hook 'org-mode-hook 'org-modern-mode)
 (after! org
-  ;; (setq org-latex-preview-mode-display-live t)
+  (setq org-latex-preview-mode-display-live t)
   (setq org-directory "~/notes/org-mode/")
   (setq org-roam-directory "~/notes/org-mode/")
   (setq org-habit-show-habits-only-for-today nil)
@@ -98,16 +98,16 @@ Set the directory
   (setq org-startup-folded 'content)
   ;; (setq org-startup-with-inline-images t)
   (setq org-startup-with-link-previews t)
-  (setq org-startup-with-latex-preview t)
-  (setq org-ellipsis " ")) ;; folding symbol
+  (setq org-startup-with-latex-preview t))
+  ;; (setq org-ellipsis " ")) ;; folding symbol
 #+end_src
 ** Org Writeroom
-*** COMMENT Setting the variable fonts
+*** Setting the variable fonts
 #+begin_src emacs-lisp
-(setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
+(setq doom-font (font-spec :family "IntoneMono Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "Vollkorn"))
 #+end_src
-*** Setting the fixed fonts
+*** COMMENT Setting the fixed fonts
 #+begin_src emacs-lisp
 (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono"))
@@ -244,6 +244,12 @@ Fix that annoying sqlitep nil error:
     'org-babel-load-languages
     '((mermaid . t)
       (emacs-lisp . t))))
+#+end_src
+* Org Export
+** Ox clip clipboard command
+#+begin_src emacs-lisp
+(after! org
+  (setq ox-clip-linux-cmd "cat %f | wl-copy"))
 #+end_src
 * Latex
 #+begin_src emacs-lisp
