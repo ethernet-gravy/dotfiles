@@ -131,7 +131,7 @@ output "eDP-1" {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 12
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -280,9 +280,8 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
 
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "qs" //quickshell
 spawn-at-startup  "udiskie"
 spawn-at-startup "stasis"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"

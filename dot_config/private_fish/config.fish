@@ -25,7 +25,10 @@ function ytdlp
     yt-dlp --extract-audio --audio-format mp3 -o $path"%(title)s.%(ext)s" --embed-thumbnail --metadata-from-title  "%(artist)s - %(title)s" $argv
 end
 
-
+function make_playlist
+    echo "#EXTM3U" >> playlist.m3u
+    find -type f -iname "*.mp3" -o -iname "*.flac" | sort >> playlist.m3u
+end
 
 
 
