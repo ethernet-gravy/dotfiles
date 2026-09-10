@@ -84,9 +84,9 @@
 (package! htmlz-mode :recipe
   (:host nil :repo "https://github.com/0xekez/htmlz-mode"))
 
-(package! typst-ts-mode :recipe
-  (:host codeberg :repo "meow_king/typst-ts-mode"))
-(package! tip :recipe
-  (:host nil :repo "https://git.sr.ht/~mafty/tip"))
-(package! typst-preview :recipe
-  (:host github :repo "havarddj/typst-preview.el"))
+;; (package! typst-ts-mode :recipe
+;;   (:host codeberg :repo "meow_king/typst-ts-mode"))
+;; (package! tip :recipe
+;;   (:host nil :repo "https://git.sr.ht/~mafty/tip"))
+;; (package! typst-preview :recipe
+;;   (:host github :repo "havarddj/typst-preview.el"))

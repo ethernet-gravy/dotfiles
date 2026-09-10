@@ -155,21 +155,3 @@
 
 (after! web-mode
   (add-hook 'web-mode-hook #'htmlz-mode))
-
-(add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
-
-(add-hook! 'typst-ts-mode-hook 'eglot-ensure)
-(after! typst-ts-mode
-  (setq typst-ts-watch-options '("--open"))
-  (setq typst-ts-mode-enable-raw-blocks-highlight t)
-  )
-
-(set-eglot-client! 'typst-ts-mode '("tinymist"))
-
-(after! typst-ts
-  (setq typst-preview-autostart t)
-  (setq typst-preview-open-browser-automatically t)
-  (setq typst-preview-browser "default")  ; this is the default option; other options are `eaf-browser' or `xwidget'.
-  (setq typst-preview-invert-colors "never") ; invert colors depending on system theme
-  (setq typst-preview-executable "tinymist") ; path to tinymist binary (relative or absolute)
-  (setq typst-preview-partial-rendering t))   ; enable partial rendering

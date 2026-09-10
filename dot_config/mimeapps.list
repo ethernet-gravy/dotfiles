@@ -55,3 +55,5 @@ x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/tg=org.telegram.desktop.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 x-scheme-handler/msteams=teams-for-linux.desktop
+x-scheme-handler/sgnl=signal.desktop
+x-scheme-handler/signalcaptcha=signal.desktop

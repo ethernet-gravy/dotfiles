@@ -285,7 +285,7 @@ HTML Auto Preview
 (after! web-mode
   (add-hook 'web-mode-hook #'htmlz-mode))
 #+end_src
-* Typst
+* COMMENT Typst
 ** add major mode
 #+begin_src emacs-lisp
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
